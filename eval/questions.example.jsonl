@@ -1,0 +1,4 @@
+{"id": "te-elig-1", "question": "ఈ పథకానికి ఎవరు అర్హులు?", "doc_id": "example-scheme-guidelines-2025", "pages": [2], "answerable": true}
+{"id": "en-docs-1", "question": "Which documents are needed to apply for the example scheme?", "doc_id": "example-scheme-guidelines-2025", "pages": [4, 5], "answerable": true}
+{"id": "te-mixed-1", "question": "Example scheme ki apply cheyyadaniki last date enti?", "doc_id": "example-scheme-guidelines-2025", "answerable": true}
+{"id": "neg-1", "question": "What is the APSRTC bus pass fare for students?", "answerable": false}

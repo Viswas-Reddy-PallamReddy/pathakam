@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Data: raw documents and the index are rebuilt from data/sources.yaml
+data/raw/
+data/*.db
+data/*.db-wal
+data/*.db-shm
+eval/results/
+
+# Secrets
+.env
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

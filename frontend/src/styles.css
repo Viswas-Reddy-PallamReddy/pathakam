@@ -1,0 +1,80 @@
+:root {
+  --bg: #f7f5f0;
+  --panel: #ffffff;
+  --text: #1d1b16;
+  --muted: #6b665c;
+  --line: #e4dfd4;
+  --accent: #0f6b5c;
+  --accent-soft: #e2f1ed;
+  --user: #efe9dc;
+  --error: #b3261e;
+  --hl: #fff4cc;
+  font-family: "Inter", "Noto Sans Telugu", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15140f;
+    --panel: #1f1d17;
+    --text: #ece8de;
+    --muted: #a39d90;
+    --line: #34312a;
+    --accent: #5cc4ae;
+    --accent-soft: #1d332e;
+    --user: #2a2720;
+    --error: #ff8a80;
+    --hl: #3d3519;
+  }
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); }
+button, select, textarea { font: inherit; color: inherit; }
+
+.app { display: flex; flex-direction: column; min-height: 100vh; max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+header { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--accent); color: var(--panel); font-family: "Noto Sans Telugu"; font-size: 22px; font-weight: 600; }
+h1 { margin: 0; font-size: 20px; }
+.tagline { margin: 0; color: var(--muted); font-size: 13px; }
+.controls { display: flex; align-items: center; gap: 8px; }
+select { padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+.status { font-size: 12px; padding: 4px 8px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); }
+.status::before { content: "●"; margin-right: 6px; }
+.status.ok::before { color: var(--accent); }
+.status.bad::before { color: var(--error); }
+
+main { flex: 1; padding: 20px 0; display: flex; flex-direction: column; gap: 14px; }
+.empty { text-align: center; color: var(--muted); margin-top: 8vh; }
+.examples { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+.examples button { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 8px 14px; cursor: pointer; }
+.examples button:hover { border-color: var(--accent); }
+
+.turn { padding: 12px 16px; border-radius: 12px; line-height: 1.65; overflow-wrap: anywhere; }
+.turn p { margin: 0; white-space: pre-wrap; }
+.turn.user { align-self: flex-end; background: var(--user); max-width: 85%; }
+.turn.assistant { background: var(--panel); border: 1px solid var(--line); }
+.thinking { color: var(--muted); }
+.error { color: var(--error); margin-top: 8px !important; }
+
+.cite { border: none; background: var(--accent-soft); color: var(--accent); border-radius: 6px; padding: 0 6px; margin: 0 2px; font-size: 12px; font-weight: 600; cursor: pointer; vertical-align: 1px; }
+
+.sources { margin-top: 10px; font-size: 14px; }
+.sources summary { cursor: pointer; color: var(--muted); }
+.sources ol { list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-direction: column; gap: 8px; }
+.sources li { display: flex; gap: 10px; padding: 8px; border-radius: 8px; border: 1px solid var(--line); }
+.sources li.hl { background: var(--hl); }
+.sources .n { font-weight: 600; color: var(--accent); min-width: 1.2em; }
+.sources a { color: var(--accent); font-weight: 600; }
+.page { color: var(--muted); }
+.snippet { color: var(--muted); font-size: 13px; margin-top: 4px !important; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.timing { font-size: 12px; color: var(--muted); margin-top: 8px !important; }
+
+.composer { position: sticky; bottom: 0; display: flex; gap: 8px; padding: 12px 0; background: var(--bg); }
+.composer textarea { flex: 1; resize: none; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel); }
+.composer button { padding: 0 18px; border: none; border-radius: 10px; background: var(--accent); color: var(--panel); font-weight: 600; cursor: pointer; }
+.composer button:disabled { opacity: 0.5; cursor: default; }
+footer { font-size: 12px; color: var(--muted); text-align: center; padding: 0 0 14px; }

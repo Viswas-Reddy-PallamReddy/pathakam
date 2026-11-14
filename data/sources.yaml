@@ -1,0 +1,25 @@
+# Official documents the assistant answers from. Add only government sources
+# (GO PDFs, scheme guidelines, official portal FAQ pages saved as text).
+#
+#   file:         name inside data/raw/ (required)
+#   id:           stable document id (default: slug of the file name)
+#   title:        shown in citations
+#   scheme:       scheme name, for filtering later
+#   state:        AP | TS
+#   language:     te | en | mixed
+#   source_url:   official page or PDF that citations link to
+#   download_url: direct file link, if different from source_url (used by `pathakam fetch`)
+#   as_of:        GO / notification date, so stale rules can be flagged
+#
+# Example (replace with real, verified official links):
+#
+# - file: example-scheme-guidelines-2025.pdf
+#   id: example-scheme-guidelines-2025
+#   title: Example Scheme operational guidelines (G.O. Ms. No. __, 2025)
+#   scheme: Example Scheme
+#   state: AP
+#   language: te
+#   source_url: https://<official-department-site>/guidelines.pdf
+#   as_of: 2025-06-01
+
+documents: []
